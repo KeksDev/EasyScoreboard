@@ -24,7 +24,7 @@ class Scoreboard {
         $count = 0;
 
         foreach($this->data as $d) {
-            $sc->setScoreboardEntry($player, $count, $d, $this->name);
+            Main::setScoreboardEntry($player, $count, $d, $this->name);
             $count++;
         }
     } 
