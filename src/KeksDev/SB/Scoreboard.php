@@ -1,9 +1,11 @@
 <?php
 namespace KeksDev\SB;
 
+use KeksDev\SB\Main;
+
 class Scoreboard {
  public function __construct(Player $p, String $name, $data = []) {
-        $this->name = $name
+        $this->name = $name;
         $this->p = $p;
         $this->data = $data;
     }
