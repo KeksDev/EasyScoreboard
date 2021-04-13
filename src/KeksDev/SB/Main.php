@@ -9,7 +9,14 @@ use pocketmine\network\mcpe\protocol\SetScorePacket;
 use pocketmine\network\mcpe\protocol\types\ScorePacketEntry;
 
 class Main extends PluginBase {
-  public function setScoreboardEntry(Player $player, int $score, string $msg, string $objName)
+  
+  public function onEnable() {
+    $this->getLogger()->info("API Enabled!");
+    $this->getLogger()->info("Plugin by KeksDev");
+    $this->getLogger()->info("https://github.com/KeksDev/EasyScoreboard");
+  }
+  
+  public static function setScoreboardEntry(Player $player, int $score, string $msg, string $objName)
     {
         $entry = new ScorePacketEntry();
         $entry->objectiveName = $objName;
@@ -23,7 +30,7 @@ class Main extends PluginBase {
         $player->sendDataPacket($pk);
     }
 
-    public function rmScoreboardEntry(Player $player, int $score)
+    public static function rmScoreboardEntry(Player $player, int $score)
     {
         $pk = new SetScorePacket();
         if (isset($pk->entries[$score])) {
@@ -32,7 +39,7 @@ class Main extends PluginBase {
         }
     }
 
-    public function createScoreboard(Player $player, string $title, string $objName, string $slot = "sidebar", $order = 0)
+    public static function createScoreboard(Player $player, string $title, string $objName, string $slot = "sidebar", $order = 0)
     {
         $pk = new SetDisplayObjectivePacket();
         $pk->displaySlot = $slot;
@@ -43,7 +50,7 @@ class Main extends PluginBase {
         $player->sendDataPacket($pk);
     }
 
-    public function rmScoreboard(Player $player, string $objName)
+    public static function rmScoreboard(Player $player, string $objName)
     {
         $pk = new RemoveObjectivePacket();
         $pk->objectiveName = $objName;
