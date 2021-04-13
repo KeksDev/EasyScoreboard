@@ -5,6 +5,11 @@ use KeksDev\SB\Main;
 use pocketmine\Player;
 
 class Scoreboard {
+ 
+ private $name;
+ private $p;
+ private $data;
+ 
  public function __construct(Player $p, String $name, $data = []) {
         $this->name = $name;
         $this->p = $p;
