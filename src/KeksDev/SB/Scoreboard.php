@@ -2,6 +2,7 @@
 namespace KeksDev\SB;
 
 use KeksDev\SB\Main;
+use pocketmine\Player;
 
 class Scoreboard {
  public function __construct(Player $p, String $name, $data = []) {
