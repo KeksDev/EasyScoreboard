@@ -1,4 +1,5 @@
 <?php
+
 namespace KeksDev\SB;
 
 use pocketmine\plugin\PluginBase;
