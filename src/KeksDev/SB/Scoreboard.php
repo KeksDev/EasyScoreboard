@@ -1,5 +1,4 @@
 <?php
-
 namespace KeksDev\SB;
 
 use KeksDev\SB\Main;
