@@ -1,4 +1,5 @@
 <?php
+
 namespace KeksDev\SB;
 
 use pocketmine\plugin\PluginBase;
@@ -9,12 +10,6 @@ use pocketmine\network\mcpe\protocol\SetScorePacket;
 use pocketmine\network\mcpe\protocol\types\ScorePacketEntry;
 
 class Main extends PluginBase {
-  
-  public function onEnable() {
-    $this->getLogger()->info("API Enabled!");
-    $this->getLogger()->info("Plugin by KeksDev");
-    $this->getLogger()->info("https://github.com/KeksDev/EasyScoreboard");
-  }
   
   public static function setScoreboardEntry(Player $player, int $score, string $msg, string $objName)
     {
