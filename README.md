@@ -1,6 +1,16 @@
 # EasyScoreboard
 An easy API to make Scoreboards in PocketMine-MP
- # Usage
+# Usage
+# create scoreboard
  ```php
- $sb = new \KeksDev\SB\Scoreboard($player, "Title of the Scoreboard", ["Array", "of", "Strings", "foreach", "Line", "one", "String"]); 
- $sb->send();
+$scoreboard = new Scoreboard();
+$scoreboard->createScoreboard($player, "Scoreboard", "NAME");
+$scoreboard->addLine($player, 0, "Hallo", "NAME");
+$scoreboard->addLine($player, 1, "wie gehts", "NAME");
+```
+# remove scoreboard
+ ```php
+$scoreboard = new Scoreboard();
+$scoreboard->removeScoreboard($player, "NAME");
+```
+
